@@ -1,0 +1,71 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "flowtype"
+  ],
+  "globals": {
+    "__JEST_TESTS__": true,
+    "fetch": true,
+    "window": true
+  },
+  "rules": {
+    "eol-last": 0,
+    "object-curly-spacing": [2, "never"],
+    "arrow-body-style": 0,
+    "consistent-return": 0,
+    "no-param-reassign": 0,
+    "no-else-return": 0,
+    "no-return-assign": 0,
+    "no-unused-vars": [2, {"args": "none"}],
+    "no-nested-ternary": 0,
+    "max-len": 0,
+    "radix": 0,
+    "no-shadow": 0,
+    "no-use-before-define": [2, {"functions": false}],
+    "no-console": 2,
+    "no-underscore-dangle": 0,
+    "spaced-comment": [2, "always", {"exceptions": ["-"]}],
+    "generator-star-spacing": 2,
+    "no-plusplus": 0,
+    "jsx-quotes": [2, "prefer-single"],
+
+    "import/named": 2,
+    "import/prefer-default-export": 0,
+    "import/no-commonjs": 2,
+    "import/extensions": [2, {"js": "never", "json": "always"}],
+
+    "react/require-extension": 0,
+    "react/jsx-filename-extension": 0,
+    "react/prefer-stateless-function": 0,
+    "react/sort-comp": [2, {
+      "order": [
+        "type-annotations",
+        "static-methods",
+        "lifecycle",
+        "everything-else",
+        "render"
+      ]
+    }],
+    "react/jsx-boolean-value": [2, "always"],
+    "react/jsx-tag-spacing": [2, {
+      "beforeSelfClosing": "never"
+    }],
+    "react/jsx-space-before-closing": [2, "never"],
+    "react/require-default-props": 0,
+
+    "flowtype/define-flow-type": 2,
+    "flowtype/require-parameter-type": 0,
+    "flowtype/require-return-type": 0,
+    "flowtype/require-valid-file-annotation": [2, "always"],
+    "flowtype/space-after-type-colon": [2, "always"],
+    "flowtype/space-before-type-colon": [2, "never"],
+    "flowtype/type-id-match": [2, "^([A-Z][a-z0-9]+)+Type$"],
+    "flowtype/use-flow-type": 2,
+    "flowtype/valid-syntax": 2
+  }
+}

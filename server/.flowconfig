@@ -1,0 +1,8 @@
+[version]
+0.40.0
+
+[ignore]
+.*/.git/.*
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore

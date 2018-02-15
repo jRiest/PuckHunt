@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "es2015-node6/object-rest",
+    "flow"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-runtime"
+  ]
+}

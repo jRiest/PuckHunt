@@ -1,0 +1,47 @@
+{
+	"name": "PuckHunt",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"lint": "eslint .",
+		"flow:status": "flow status",
+		"flow:check": "flow check",
+		"flow:stop": "flow stop",
+		"app": "react-native run-ios",
+		"test": "jest"
+	},
+	"pre-commit": [
+		"lint",
+		"flow:status"
+	],
+	"dependencies": {
+		"color": "^1.0.3",
+		"lodash": "^4.17.4",
+		"react": "~15.4.1",
+		"react-native": "0.42.0",
+		"react-native-maps": "^0.13.0",
+		"react-native-simple-gauge": "^0.1.2",
+		"react-native-swipe-list-view": "^0.3.3",
+		"react-redux": "^5.0.3",
+		"redux": "^3.6.0",
+		"redux-thunk": "^2.2.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^7.1.1",
+		"babel-jest": "19.0.0",
+		"babel-preset-react-native": "1.9.1",
+		"eslint": "^3.17.0",
+		"eslint-config-airbnb": "^14.1.0",
+		"eslint-plugin-flowtype": "^2.30.0",
+		"eslint-plugin-import": "^2.2.0",
+		"eslint-plugin-jsx-a11y": "^4.0.0",
+		"eslint-plugin-react": "^6.10.0",
+		"flow-bin": "^0.38.0",
+		"jest": "19.0.2",
+		"pre-commit": "^1.2.2",
+		"react-test-renderer": "~15.4.1"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}

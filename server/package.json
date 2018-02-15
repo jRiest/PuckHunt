@@ -1,0 +1,61 @@
+{
+  "name": "punkhunt-server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "flow:status": "flow status",
+    "flow:check": "flow check",
+    "flow:stop": "flow stop",
+    "app": "babel-node src/index.js",
+    "test": "jest --config jestConfigs/unit.json",
+    "clean": "rimraf dist/**",
+    "build:babel": "babel src --out-dir dist --copy-files --ignore __tests__,__mocks__",
+    "build": "npm run clean && npm run build:babel",
+    "heroku-postbuild": "npm run flow:check && npm run lint && npm run build"
+  },
+  "engines": {
+    "node": ">=7.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "flow:status"
+  ],
+  "dependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.6.0",
+    "babel-preset-es2015-node6": "^0.4.0",
+    "babel-preset-flow": "^6.22.0",
+    "babel-runtime": "^6.11.6",
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.16.0",
+    "compression": "^1.6.2",
+    "dedent": "^0.7.0",
+    "dotenv": "^4.0.0",
+    "envalid": "^2.4.1",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-flowtype": "^2.20.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.0.0",
+    "express": "^4.14.1",
+    "flow-bin": "^0.40.0",
+    "is-my-json-valid": "^2.16.0",
+    "jest-cli": "^19.0.2",
+    "jest-diff": "^19.0.0",
+    "jest-matcher-utils": "^19.0.0",
+    "lodash": "^4.17.2",
+    "pg": "^6.1.2",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.1.3"
+  }
+}
